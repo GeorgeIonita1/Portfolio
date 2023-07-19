@@ -1,0 +1,40 @@
+@import '../../styles/mixins.scss';
+
+.skills {
+    background-color: purple;
+
+    &Container {
+
+    }
+
+    &Technical {
+        &Icon {
+            width: rem(20);
+            height: rem(20);
+        }
+
+        &Progress {
+            height: rem(2);
+            width: 100%;
+            background-color: var(--white);
+            
+            div {
+                background-color: black;
+                height: rem(2);
+                width: 30%;
+            }
+        }
+    }
+
+    &Professional {
+
+    }
+
+    &Wrapper {
+
+    }
+
+    &Instance {
+        
+    }
+}

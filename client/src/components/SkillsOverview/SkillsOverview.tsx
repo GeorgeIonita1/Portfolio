@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { CircularProgressbar } from 'react-circular-progressbar';
 
 import styles from './SkillsOverview.module.scss';
 import htmlIcon from '../../../public/icons/html5.svg';
@@ -19,38 +20,38 @@ export default function SkillsOverview() {
             <div className={styles.skillsContainer}>
                 <div className={styles.skillsTechnical}>
                     <h3>Technical Skills</h3>
-                    <div className={styles.skillsWrapper}>
-                        <div className={styles.skillsInstance}>
+                    <div>
+                        <div className={styles.skillsTechnicalInstance}>
                             <div className={styles.skillsTechnicalIcon}><Image src={htmlIcon} alt='Html icon' /></div>
                             <small>HTML</small>
                             <div className={styles.skillsTechnicalProgress}><div /></div>
                         </div>
-                        <div className={styles.skillsInstance}>
+                        <div className={styles.skillsTechnicalInstance}>
                             <div className={styles.skillsTechnicalIcon}><Image src={sassIcon} alt='sass Icon' /></div>
                             <small>Sass</small>
                             <div className={styles.skillsTechnicalProgress}><div /></div>
                         </div>
-                        <div className={styles.skillsInstance}>
+                        <div className={styles.skillsTechnicalInstance}>
                             <div className={styles.skillsTechnicalIcon}><Image src={javascriptIcon} alt='javascript Icon' /></div>
                             <small>JavaScript</small>
                             <div className={styles.skillsTechnicalProgress}><div /></div>
                         </div>
-                        <div className={styles.skillsInstance}>
+                        <div className={styles.skillsTechnicalInstance}>
                             <div className={styles.skillsTechnicalIcon}><Image src={reactIcon} alt='react Icon' /></div>
                             <small>React</small>
                             <div className={styles.skillsTechnicalProgress}><div /></div>
                         </div>
-                        <div className={styles.skillsInstance}>
+                        <div className={styles.skillsTechnicalInstance}>
                             <div className={styles.skillsTechnicalIcon}><Image src={nodeIcon} alt='node Icon' /></div>
                             <small>Node</small>
                             <div className={styles.skillsTechnicalProgress}><div /></div>
                         </div>
-                        <div className={styles.skillsInstance}>
+                        <div className={styles.skillsTechnicalInstance}>
                             <div className={styles.skillsTechnicalIcon}><Image src={nestIcon} alt='nest Icon' /></div>
                             <small>Nest</small>
                             <div className={styles.skillsTechnicalProgress}><div /></div>
                         </div>
-                        <div className={styles.skillsInstance}>
+                        <div className={styles.skillsTechnicalInstance}>
                             <div className={styles.skillsTechnicalIcon}><Image src={gitIcon} alt='git Icon' /></div>
                             <small>Git</small>
                             <div className={styles.skillsTechnicalProgress}><div /></div>
@@ -59,7 +60,32 @@ export default function SkillsOverview() {
                 </div>
                 <div className={styles.skillsProfessional}>
                     <h3>Professional Skills</h3>
-                    <div className={styles.skillsWrapper}></div>
+                    <div className={styles.skillsProfessionalContainer}>
+                        <div className={styles.skillsProfessionalInstance}>
+                            <div>
+                                <small>70%</small>
+                            </div>
+                            Pizza
+                        </div>
+                        <div className={styles.skillsProfessionalInstance}>
+                            <div>
+                                <small>70%</small>
+                            </div>
+                            Pizza
+                        </div>
+                        <div className={styles.skillsProfessionalInstance}>
+                            <div>
+                                <small>70%</small>
+                            </div>
+                            Pizza
+                        </div>
+                        <div className={styles.skillsProfessionalInstance}>
+                            <div>
+                                <small>70%</small>
+                            </div>
+                            Pizza
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

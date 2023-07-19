@@ -16,7 +16,7 @@ export default function AboutMe() {
                 <h4>Get to know</h4>
                 <h2>About me</h2>
             </div>
-            <div className={styles.aboutMeMainContent}>
+            <div className={`${styles.aboutMeMainContent} vertically-centered`}>
                 <div className={styles.aboutMePoster}>
                     <Image src={profilePicture} alt='Picture of myself' />
                 </div>

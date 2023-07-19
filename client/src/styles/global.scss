@@ -29,6 +29,15 @@ section {
     padding: 3rem 1rem;
 }
 
+.title-container {
+    text-align: center;
+}
+
+.vertically-centered {
+    @include position(absolute, $top: 50%);
+    transform: translateY(-50%);
+}
+
 // typography
 h1 {
     font-size: rem(40);
@@ -38,7 +47,8 @@ span {
     font-size: rem(14);
 }
 
-// components
-.title-container {
-    text-align: center;
+small {
+    font-weight: 900;
 }
+
+// components

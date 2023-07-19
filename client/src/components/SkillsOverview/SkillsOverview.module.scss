@@ -4,10 +4,25 @@
     background-color: purple;
 
     &Container {
+        display: flex;
+        gap: 20vw;
 
+        > div {
+            flex-basis: 400px;
+        }
+
+        h3 {
+            text-align: center;
+        }
     }
 
     &Technical {
+        > div {
+            > div {
+                margin-bottom: 1rem;
+            }
+        }
+
         &Icon {
             width: rem(20);
             height: rem(20);
@@ -18,25 +33,53 @@
             width: 100%;
             background-color: var(--white);
             
-            div {
+            > div {
+                position: relative;
                 background-color: black;
                 height: rem(2);
                 width: 30%;
+            }
+        }
+
+        &Percentage {
+            @include position(absolute, $right: 0, $bottom: 0.7rem);
+            font-size: 12px;
+            background-color: black;
+            color: white;
+            transform: translateX(50%);
+
+            &::after {
+                @include position(absolute, $left: 50%);
+                transform: translateX(-50%);
+                content: "";
+                width: 0;
+                height: 0;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 7px solid black;
+                display: block;
             }
         }
     }
 
     &Professional {
         &Container {
-
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem 0;
         }
 
         &Instance {
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+
             > div {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
                 width: 100px;
                 height: 100px;
                 border-radius: 50%;

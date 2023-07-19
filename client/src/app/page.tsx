@@ -1,3 +1,4 @@
+import AboutMe from "@/components/AboutMe/AboutMe";
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import Presentation from "@/components/Presentation/Presentation";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <NavigationBar />
       <Presentation />
+      <AboutMe />
     </>
   )
 }

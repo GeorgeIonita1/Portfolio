@@ -22,10 +22,11 @@ img {
 
 // layout
 section {
+    position: relative;
     max-width: rem(1500);
     min-height: 100vh;
     margin: 0 auto;
-    padding-top: 3rem;
+    padding: 3rem 1rem;
 }
 
 // typography
@@ -35,4 +36,9 @@ h1 {
 
 span {
     font-size: rem(14);
+}
+
+// components
+.title-container {
+    text-align: center;
 }

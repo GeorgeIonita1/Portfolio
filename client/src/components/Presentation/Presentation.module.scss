@@ -46,10 +46,8 @@
     
     &Scroll {
         @include position(absolute, $bottom: 1rem, $right: 0);
-        margin-right: 1rem;
 
         small {
-            display: block;
             transform: rotate(90deg) translateX(-50%);
             display: flex;
             align-items: center;

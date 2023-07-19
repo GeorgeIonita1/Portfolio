@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './mixins.scss';
 
 *,
 *::before,
@@ -6,12 +7,32 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 body {
     background-color: red;
 }
 
-ul {
-    list-style-type: none;
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+// layout
+section {
+    max-width: rem(1500);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+// typography
+h1 {
+    font-size: rem(40);
+}
+
+span {
+    font-size: rem(14);
 }

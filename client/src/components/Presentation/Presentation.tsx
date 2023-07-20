@@ -8,7 +8,7 @@ export default function Presentation() {
     return (
         <section className={styles.presentation}>
             <h1>
-                <span>Hello I'm</span>
+                <span>Hello Im</span>
                 George Ionita
                 <span>Fullstack Developer</span>
             </h1>

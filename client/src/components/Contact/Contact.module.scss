@@ -1,0 +1,35 @@
+@import '../../styles/mixins.scss';
+
+.contact {
+    background-color: darkmagenta;
+    display: flex;
+    gap: 4rem;
+
+    input {
+        display: block;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    &Form {
+        flex-basis: 40%;
+        position: relative;
+        background-color: blueviolet;
+        border-radius: var(--border-radius-card);
+        padding: 2rem;
+
+        form {
+            position: absolute;
+            inset: 2rem;
+            top: 6rem;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &Image {
+        flex-basis: 60%;
+    }
+}

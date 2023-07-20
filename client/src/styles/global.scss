@@ -20,6 +20,14 @@ img {
     object-fit: cover;
 }
 
+input {
+    all: unset;
+    background-color: black;
+    border-radius: 4px;
+    color: white;
+    padding: 0.5rem 0;
+}
+
 // layout
 section {
     position: relative;

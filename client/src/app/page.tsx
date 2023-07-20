@@ -1,4 +1,5 @@
 import AboutMe from "@/components/AboutMe/AboutMe";
+import Contact from "@/components/Contact/Contact";
 import Experience from "@/components/Experience/Experience";
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import Presentation from "@/components/Presentation/Presentation";
@@ -14,6 +15,7 @@ export default function Home() {
       <Experience />
       <SkillsOverview />
       <RecentWork />
+      <Contact />
     </>
   )
 }

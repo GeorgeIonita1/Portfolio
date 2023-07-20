@@ -1,0 +1,39 @@
+@import '../../styles/mixins.scss';
+
+.experience {
+    background-color: beige;
+
+    &Container {
+        margin-top: 5rem;
+
+        > div {
+            position: relative;
+            background-color: red;
+            max-width: 30%;
+
+            > div {
+                @include position(absolute, $top: 0);
+                width: 3px;
+                height: 100%;
+                background-color: black;
+            }
+
+            &:nth-child(odd) {
+                left: calc(50% + 3rem);
+
+                > div {
+                    left: -3rem;
+                }
+            }
+            
+            &:nth-child(even) {
+                left: calc(50% - 2.8rem);
+                transform: translateX(-100%);
+
+                > div {
+                    right: -3rem;
+                }
+            }
+        }
+    }
+}

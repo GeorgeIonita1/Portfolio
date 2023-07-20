@@ -1,4 +1,5 @@
 import AboutMe from "@/components/AboutMe/AboutMe";
+import Experience from "@/components/Experience/Experience";
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import Presentation from "@/components/Presentation/Presentation";
 import SkillsOverview from "@/components/SkillsOverview/SkillsOverview";
@@ -9,6 +10,7 @@ export default function Home() {
       <NavigationBar />
       <Presentation />
       <AboutMe />
+      <Experience />
       <SkillsOverview />
     </>
   )

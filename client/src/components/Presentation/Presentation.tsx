@@ -7,11 +7,13 @@ import githubIcon from '../../../public/icons/github.svg';
 export default function Presentation() {
     return (
         <section className={styles.presentation}>
-            <h1>
-                <span>Hello Im</span>
-                George Ionita
-                <span>Fullstack Developer</span>
-            </h1>
+            <div className='title-container'>
+                <h1>
+                    <span>Hello Im</span>
+                    George
+                    <span>Fullstack Developer</span>
+                </h1>
+            </div>
             <div className={styles.presentationImage}>
                 <Image src={myPicture} alt='Picture of myself' />
             </div>

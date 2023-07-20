@@ -34,25 +34,40 @@ section {
     max-width: rem(1500);
     min-height: 100vh;
     margin: 0 auto;
-    padding: 3rem 1rem;
+    padding: 10rem 1rem 3rem;
 }
 
 .title-container {
+    @include position(absolute, $top: 3rem, $left: 50%);
+    transform: translateX(-50%);
     text-align: center;
-}
-
-.vertically-centered {
-    @include position(absolute, $top: 50%);
-    transform: translateY(-50%);
 }
 
 // typography
 h1 {
-    font-size: rem(40);
+    font-size: 5rem;
+    font-weight: 300;
 }
 
+h2 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: clamp(1.12rem, 1.5vw, 1.5rem);
+    font-weight: 800;
+}
+
+h4 {
+    font-size: clamp(14px, 1vw, 1rem);
+    font-weight: 400;
+}
+
+h5,
 span {
     font-size: rem(14);
+    font-weight: 800;
 }
 
 small {

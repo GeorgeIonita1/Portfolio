@@ -21,7 +21,7 @@
             transform: translateY(-100%);
             content: '';
             background-color: black;
-            width: 3px;
+            width: rem(6);
             display: block;
             height: 1.5rem;
             z-index: 5;
@@ -30,7 +30,7 @@
 
     &Image {
         position: relative;
-        transform: translateX(-50%);
+        transform: translateX(-45%);
         width: 50px;
         height: 50px;
         z-index: 2;

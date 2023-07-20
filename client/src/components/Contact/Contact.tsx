@@ -3,9 +3,11 @@ import styles from './Contact.module.scss';
 export default function Contact() {
     return (
         <section className={styles.contact}>
-            <div className={styles.contactForm}>
-                <h4>Get in touch</h4>
+            <div className='title-container'>
+                <h5>Get in touch</h5>
                 <h2>Contact</h2>
+            </div>
+            <div className={styles.contactForm}>
                 <form>
                     <label>
                         Your Name

@@ -13,10 +13,10 @@ export default function SkillsOverview() {
     return (
         <section className={styles.skills}>
             <div className='title-container'>
-                <h4>What skills i have</h4>
+                <h5>What skills i have</h5>
                 <h2>My experience</h2>
             </div>
-            <div className={`${styles.skillsContainer} vertically-centered`}>
+            <div className={styles.skillsContainer}>
                 <div className={styles.skillsTechnical}>
                     <h3>Technical Skills</h3>
                     <div>

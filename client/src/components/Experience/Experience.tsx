@@ -5,7 +5,7 @@ export default function Experience() {
     return (
         <section className={styles.experience}>
             <div className='title-container'>
-                <h4>What I have done so far</h4>
+                <h5>What I have done so far</h5>
                 <h2>Work Experience</h2>
             </div>
             <div className={styles.experienceContainer}>

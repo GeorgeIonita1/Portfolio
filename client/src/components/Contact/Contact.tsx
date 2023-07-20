@@ -29,7 +29,7 @@ export default function Contact() {
                 </form>
             </div>
             <div className={styles.contactImage}>
-                Imagine
+                Imaginess
             </div>
         </section>
     )

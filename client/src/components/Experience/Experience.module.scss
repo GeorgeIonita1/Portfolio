@@ -5,6 +5,9 @@
 
     &Container {
         > div {
+            @media (max-width: $media-breakpoint-XL) {
+                max-width: 40%;
+            }
             position: relative;
             background-color: red;
             max-width: 30%;

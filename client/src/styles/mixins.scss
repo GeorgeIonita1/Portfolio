@@ -10,3 +10,7 @@
     $remValue: ($value / 16) + rem; 
     @return $remValue;
 }
+
+// breakpoints
+$media-breakpoint-XL: 64rem; // 1024
+$media-breakpoint-L: 36.87rem; // 590

@@ -1,7 +1,6 @@
 @import '../../styles/mixins.scss';
 
 .aboutMe {
-    background-color: green;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,7 +51,8 @@
         @media (max-width: $media-breakpoint-L) {
             flex-basis: calc(50% - 0.5rem);
         }
-        background-color: red;
+        position: relative;
+        background-color: var(--card-background);
         flex-basis: 33.3%;
         display: flex;
         flex-direction: column;
@@ -63,6 +63,15 @@
         padding: 1rem;
         border-radius: var(--border-radius-card);
         max-width: rem(260);
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(to bottom, var(--card-border-start), var(--card-border-end));
+            z-index: -1;
+            border-radius: inherit;
+        }
 
         h3 {
             text-align: center;

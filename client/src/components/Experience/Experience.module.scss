@@ -1,10 +1,6 @@
 @import '../../styles/mixins.scss';
 
-.experience {
-    background-color: beige;
-}
-
-.container > div  {
+.experience > div  {
     // card
     @media (min-width: $media-breakpoint-L) {
         max-width: 40%;
@@ -16,7 +12,7 @@
     position: relative;
     left: 4rem;
     max-width: calc(100% - 4rem);
-    background-color: red;
+    background-color: var(--card-background);
     
     > div {
         // skeleton
@@ -24,14 +20,14 @@
             left: -3rem;
         }
         @include position(absolute, $top: 0);
-        width: rem(6);
+        width: rem(5);
         height: 100%;
-        background-color: black;
+        background-color: var(--tree-background);
     }
     
     &:nth-child(odd) {
         @media (min-width: $media-breakpoint-L) {
-            transform: translateX(calc(-100% - 3rem + 6px));
+            transform: translateX(calc(-100% - 3rem + 5px));
         }
 
 

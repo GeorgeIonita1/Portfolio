@@ -1,8 +1,6 @@
 @import '../../styles/mixins.scss';
 
 .skills {
-    background-color: purple;
-
     &Container {
         @media (max-width: $media-breakpoint-L) {
             flex-direction: column;
@@ -23,7 +21,7 @@
         flex-basis: rem(400);
         > div {
             > div {
-                margin-bottom: 1rem;
+                margin-bottom: 5rem;
             }
         }
 
@@ -33,15 +31,17 @@
         }
 
         &Progress {
-            height: rem(2);
+            height: rem(7);
             width: 100%;
-            background-color: var(--white);
+            background-color: var(--progress-background);
+            border-radius: 50px;
             
             > div {
                 position: relative;
-                background-color: black;
-                height: rem(2);
+                background-color: var(--progress-background-accent);
+                height: 100%;
                 width: 30%;
+                border-radius: inherit;
             }
         }
 
@@ -91,8 +91,12 @@
                 height: 100%;
                 border-radius: 50%;
                 background: 
-                radial-gradient(closest-side, white 79%, transparent 80% 100%),
-                conic-gradient(hotpink 75%, pink 0);
+                radial-gradient(closest-side, white 85%, transparent 80% 100%),
+                conic-gradient(var(--progress-background-accent) 75%, var(--progress-background) 0);
+            }
+
+            small {
+                color: black;
             }
         }
 

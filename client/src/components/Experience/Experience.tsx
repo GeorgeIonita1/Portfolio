@@ -8,7 +8,7 @@ export default function Experience() {
                 <h5>What I have done so far</h5>
                 <h2>Work Experience</h2>
             </div>
-            <div className={styles.experienceContainer}>
+            <div className={styles.container}>
                 <ExperienceCard />
                 <ExperienceCard />
                 <ExperienceCard />

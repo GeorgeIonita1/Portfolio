@@ -2,47 +2,55 @@
 
 .experience {
     background-color: beige;
+}
 
-    &Container {
+.container > div  {
+    // card
+    @media (min-width: $media-breakpoint-L) {
+        max-width: 40%;
+        left: 50%;
+    }
+    @media (min-width: $media-breakpoint-XL) {
+        max-width: 30%;
+    }
+    position: relative;
+    left: 4rem;
+    max-width: calc(100% - 4rem);
+    background-color: red;
+    
+    > div {
+        // skeleton
+        @media (max-width: $media-breakpoint-L) {
+            left: -3rem;
+        }
+        @include position(absolute, $top: 0);
+        width: rem(6);
+        height: 100%;
+        background-color: black;
+    }
+    
+    &:nth-child(odd) {
+        @media (min-width: $media-breakpoint-L) {
+            transform: translateX(calc(-100% - 3rem + 6px));
+        }
+
+
         > div {
-            // card
             @media (min-width: $media-breakpoint-L) {
-                max-width: 30%;
+                right: -3rem;
             }
-            @media (min-width: $media-breakpoint-XL) {
-                max-width: 40%;
-            }
-            position: relative;
-            left: 4rem;
-            max-width: calc(100% - 4rem);
-            background-color: red;
-            // max-width: 30%;
-            // left: calc(50vw - 3rem);
-
-            > div {
-                // skeleton
-                @include position(absolute, $top: 0, $left: -2.5rem);
-                width: rem(6);
-                height: 100%;
-                background-color: black;
-            }
-
-            &:nth-child(odd) {
-                // left: calc(50% + 3rem);
-
-                > div {
-                    // left: -3rem;
-                    // right: -3rem;
-                }
-            }
-            
-            &:nth-child(even) {
-                // left: calc(50% - 2.6rem);
-                // transform: translateX(-100%);
-
-                > div {
-                    // right: -3rem;
-                }
+        }
+    }
+    
+    &:nth-child(even) {
+        @media (min-width: $media-breakpoint-L) {
+            left: calc(50% + 3rem);
+        }
+        
+        
+        > div {
+            @media (min-width: $media-breakpoint-L) {
+                left: -3rem;
             }
         }
     }

@@ -1,8 +1,29 @@
+'use client'
+
+import emailjs from '@emailjs/browser';
+import Image from 'next/image';
+import { useRef } from 'react';
+
 import styles from './Contact.module.scss';
 import planetEarthImage from '../../../public/pictures/planetEarth.jpg';
-import Image from 'next/image';
 
 export default function Contact() {
+    const formRef = useRef<HTMLFormElement>(null);
+
+    const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        if (formRef.current) {
+            emailjs.sendForm('service_5x0rhsc', 'template_uavky2k', formRef.current, 'H3piPg6aWKoBug0cN')
+                .then((result) => {
+                    console.log(result.text);
+                    alert('Thank you for your message')
+                }, (error) => {
+                    console.log(error.text);
+                    alert('THere has been an error')
+                });
+        }
+    }
     return (
         <section className={styles.contact}>
             <div className='title-container'>
@@ -15,25 +36,19 @@ export default function Contact() {
                 </div>
             </div>
             <div className={styles.contactForm}>
-                <form>
+                <form ref={formRef} onSubmit={sendEmail}>
                     <label>
                         Your Name
-                        <input type="text" />
+                        <input name='name' type="text" />
                     </label>
-                    
-
                     <label>
                         Your emai
-                        <input type="text" />
+                        <input name='email' type="email" />
                     </label>
-                    
-
                     <label>
                         Your message
-                        <textarea rows={10} />
+                        <textarea name='message' rows={10} />
                     </label>
-                    
-
                     <button>Send</button>
                 </form>
             </div>

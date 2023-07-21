@@ -1,4 +1,6 @@
 import styles from './Contact.module.scss';
+import planetEarthImage from '../../../public/pictures/planetEarth.jpg';
+import Image from 'next/image';
 
 export default function Contact() {
     return (
@@ -6,6 +8,11 @@ export default function Contact() {
             <div className='title-container'>
                 <h5>Get in touch</h5>
                 <h2>Contact</h2>
+            </div>
+            <div className={styles.contactImage}>
+                <div className={styles.contactImageWrapper}>
+                    <Image src={planetEarthImage} alt='Planet Earth' />
+                </div>
             </div>
             <div className={styles.contactForm}>
                 <form>
@@ -23,15 +30,12 @@ export default function Contact() {
 
                     <label>
                         Your message
-                        <input type="textarea" />
+                        <textarea rows={10} />
                     </label>
                     
 
                     <button>Send</button>
                 </form>
-            </div>
-            <div className={styles.contactImage}>
-                Imaginess
             </div>
         </section>
     )

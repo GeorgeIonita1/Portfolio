@@ -20,12 +20,21 @@ img {
     object-fit: cover;
 }
 
-input {
+input,
+textarea {
     all: unset;
     background-color: black;
     border-radius: 4px;
     color: white;
     padding: 0.5rem 0;
+}
+
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: rem(15) rem(30);
 }
 
 // layout

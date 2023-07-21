@@ -1,35 +1,59 @@
 @import '../../styles/mixins.scss';
 
 .contact {
+    @media (max-width: $media-breakpoint-XL) {
+        display: block;
+        max-width: 30rem;
+    }
     background-color: darkmagenta;
     display: flex;
     gap: 4rem;
-
-    input {
+    
+    input,
+    textarea {
         display: block;
         width: 100%;
         margin-top: 0.5rem;
     }
-
+    
     &Form {
-        flex-basis: 40%;
+        @media (max-width: $media-breakpoint-XL) {
+            margin-top: 2rem;
+            height: 37rem;
+        }
+        order: -1;
+        height: 38rem;
         position: relative;
         background-color: blueviolet;
         border-radius: var(--border-radius-card);
         padding: 2rem;
+        flex-basis: 27rem;
 
         form {
-            position: absolute;
-            inset: 2rem;
-            top: 6rem;
-            position: absolute;
+            @include position(absolute, $top: 2rem, $right: 2rem, $bottom: 12rem, $left: 2rem);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        button {
+            align-self: flex-start;
         }
     }
 
     &Image {
-        flex-basis: 60%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+
+        &Wrapper {
+            @media (min-width: $media-breakpoint-XL) {
+                height: 30rem;
+            }
+            aspect-ratio: 1;
+        }
     }
 }

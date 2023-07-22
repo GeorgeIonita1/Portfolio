@@ -20,7 +20,7 @@
             @include position(absolute, $top: 0);
             transform: translateY(-100%);
             content: '';
-            background-color: var(--tree-background);
+            background-color: var(--light-green);
             width: rem(5);
             display: block;
             height: 1.5rem;
@@ -34,7 +34,7 @@
         width: 50px;
         height: 50px;
         z-index: 2;
-        border: 5px solid var(--tree-background);
+        border: 5px solid var(--light-green);
         border-radius: 50%;
         background-color: var(--body-background);
         

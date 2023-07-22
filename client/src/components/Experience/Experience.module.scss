@@ -22,7 +22,7 @@
         @include position(absolute, $top: 0);
         width: rem(5);
         height: 100%;
-        background-color: var(--tree-background);
+        background-color: var(--light-green);
     }
     
     &:nth-child(odd) {

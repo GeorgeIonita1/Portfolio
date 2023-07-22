@@ -1,26 +1,31 @@
 @import '../../styles/mixins.scss';
 
 .navigation {
-    @include position(fixed, $bottom: 0.5rem, $left: 50%);
-    transform: translateX(-50%);
-    background-color: var(--navigation-background);
-    border-radius: 50px;
-    color: var(--white);
-    padding: 0.5rem;
-    z-index: 999;
-    
-    ul {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-    }
-    
+    @include position(fixed, $top: 0, $left: 0, $right: 0);
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     a {
-        background-color: var(--white);
+        position: relative;
+        color: var(--light-green);
+    }
+
+    ul li:not(:last-child) a {
+        margin-bottom: 1.5rem;
         display: block;
-        width: rem(44);
-        height: rem(44);
-        padding: rem(10);
-        border-radius: 50%;
+
+        &::after {
+            @include position(absolute, $bottom: -14px, $left: -10px , $right: -10px);
+            content: '';
+            background-color: var(--light-green);
+            height: 1px;
+        }
+    }
+
+    &Logo {
+        height: 60px;
+        width: 60px;
     }
 }

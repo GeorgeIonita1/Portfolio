@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    text-decoration: none;
 }
 
 body {
@@ -24,7 +25,7 @@ img {
 input,
 textarea {
     all: unset;
-    background-color: black;
+    background-color: var(--body-background);
     border-radius: 4px;
     color: white;
     padding: 0.5rem 0;
@@ -32,7 +33,7 @@ textarea {
 
 button {
     border: none;
-    background-color: black;
+    background-color: var(--body-background);
     color: white;
     border-radius: 8px;
     padding: rem(15) rem(30);
@@ -44,10 +45,18 @@ section {
         padding-top: 15rem;
     }
     position: relative;
-    max-width: rem(1500);
+    max-width: var(--body-max-width);
     min-height: 100vh;
     margin: 0 auto;
     padding: 13rem 1rem 3rem;
+}
+
+header {
+    max-width: var(--body-max-width);
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 3rem;
+    z-index: 10;
 }
 
 .title-container {
@@ -78,13 +87,12 @@ h4 {
 }
 
 h5,
-span {
-    font-size: rem(14);
+span,
+a {
+    font-size: rem(10);
     font-weight: 800;
 }
 
 small {
     font-weight: 900;
 }
-
-// components

@@ -1,7 +1,11 @@
 .recentwork {
-    background-color: chocolate;
-
     &Container {
-        
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem 2rem;
+
+        > div {
+            flex-basis: calc(33.3% - 1.33rem);
+        }
     }
 }

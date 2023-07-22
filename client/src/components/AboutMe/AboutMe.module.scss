@@ -68,7 +68,7 @@
             content: '';
             position: absolute;
             inset: -1px;
-            background: linear-gradient(to bottom, var(--card-border-start), var(--card-border-end));
+            background: linear-gradient(to bottom, var(--progress-background-accent), var(--card-border-end));
             z-index: -1;
             border-radius: inherit;
         }

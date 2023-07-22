@@ -1,0 +1,9 @@
+.recentWorkCard {
+    &Image {
+        aspect-ratio: 3/2;
+
+        img {
+            border-radius: var(--border-radius-tree);
+        }
+    }
+}

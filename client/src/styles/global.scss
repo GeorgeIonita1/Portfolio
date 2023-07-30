@@ -48,14 +48,13 @@ section {
     max-width: var(--body-max-width);
     min-height: 100vh;
     margin: 0 auto;
-    padding: 13rem 1rem 3rem;
+    padding: 13rem 8rem 3rem;
 }
 
 header {
     max-width: var(--body-max-width);
     margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 3rem;
+    padding: 0 3rem;
     z-index: 10;
 }
 

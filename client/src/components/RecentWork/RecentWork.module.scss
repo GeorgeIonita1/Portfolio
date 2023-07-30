@@ -1,3 +1,5 @@
+@import '../../styles/mixins.scss';
+
 .recentwork {
     &Container {
         display: flex;
@@ -5,6 +7,12 @@
         gap: 3rem 2rem;
 
         > div {
+            @media (max-width: $media-breakpoint-XL) {
+                flex-basis: calc(50% - 1rem);
+            }
+            @media (max-width: $media-breakpoint-L) {
+                flex-basis: 100%;
+            }
             flex-basis: calc(33.3% - 1.33rem);
         }
     }

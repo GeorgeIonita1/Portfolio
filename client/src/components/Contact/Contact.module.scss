@@ -3,7 +3,7 @@
 .contact {
     @media (max-width: $media-breakpoint-XL) {
         display: block;
-        max-width: 30rem;
+        max-width: 43rem;
     }
     display: flex;
     gap: 4rem;
@@ -27,6 +27,7 @@
         border-radius: var(--border-radius-card);
         padding: 2rem;
         flex-basis: 27rem;
+        flex-shrink: 0;
 
         form {
             @include position(absolute, $top: 2rem, $right: 2rem, $bottom: 12rem, $left: 2rem);
@@ -49,10 +50,7 @@
         background-color: black;
 
         &Wrapper {
-            @media (min-width: $media-breakpoint-XL) {
-                height: 30rem;
-            }
-            aspect-ratio: 1;
+            
         }
     }
 }

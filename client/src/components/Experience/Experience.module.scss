@@ -6,9 +6,6 @@
         max-width: 40%;
         left: 50%;
     }
-    @media (min-width: $media-breakpoint-XL) {
-        max-width: 30%;
-    }
     position: relative;
     left: 4rem;
     max-width: calc(100% - 4rem);

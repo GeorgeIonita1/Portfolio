@@ -41,20 +41,26 @@ button {
 
 // layout
 section {
-    @media (max-width: $media-breakpoint-L) {
-        padding-top: 15rem;
+    @media (min-width: $media-breakpoint-phone) {
+        padding: 15rem 4rem 3rem;
     }
+    @media (min-width: $media-breakpoint-tablet) {
+        padding: 15rem 8rem 3rem;
+    }
+    padding: 15rem 2rem 3rem;
     position: relative;
     max-width: var(--body-max-width);
     min-height: 100vh;
     margin: 0 auto;
-    padding: 13rem 8rem 3rem;
 }
 
 header {
+    @media (min-width: $media-breakpoint-phone) {
+        padding: 0 4rem;
+    }
     max-width: var(--body-max-width);
     margin: 0 auto;
-    padding: 0 3rem;
+    padding: 0 2rem;
     z-index: 10;
 }
 

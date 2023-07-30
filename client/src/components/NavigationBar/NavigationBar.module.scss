@@ -6,12 +6,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     a {
+        @media (max-width: $media-breakpoint-tablet) {
+            color: black;
+        }
         position: relative;
         color: var(--light-green);
     }
-
+    
     ul {
         @media (max-width: $media-breakpoint-tablet) {
             display: flex;
@@ -19,11 +22,11 @@
             align-items: center;
         }
     }
-
+    
     ul li:not(:last-child) a {
         margin-bottom: 1.5rem;
         display: block;
-
+        
         &::after {
             @media (min-width: $media-breakpoint-tablet) {
                 @include position(absolute, $bottom: -14px, $left: -10px , $right: -10px);
@@ -33,15 +36,15 @@
             }
         }
     }
-
+    
     nav {
         @media (max-width: $media-breakpoint-tablet) {
             @include position(absolute, $top: 0, $right: 0);
             width: 40%;
             height: 100vh;
-            background-color: red;
             padding-top: 8rem;
             transition: all 0.3s;
+            background-color: var(--navigation-background);
         }
     }
     
@@ -56,15 +59,17 @@
     }
 
     &Logo {
-        height: 60px;
-        width: 60px;
+        height: rem(60);
+        width: rem(60);
     }
 
     &Hamburger {
         @media (min-width: $media-breakpoint-tablet) {
             display: none;
         }
-
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(360deg) brightness(106%) contrast(103%);
+        width: rem(40);
+        height: rem(40);
     }
 
     &Close {
@@ -72,5 +77,7 @@
             display: none;
         }
         @include position(absolute, $top: 2rem, $left: 2rem);
+        color: black;
+        width: rem(40);
     }
 }

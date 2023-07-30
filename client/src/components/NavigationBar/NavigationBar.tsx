@@ -1,9 +1,12 @@
 'use client'
 
-import styles from './NavigationBar.module.scss';
-import logoIcon from '../../../public/icons/logo.svg';
 import Image from 'next/image';
 import { useState } from 'react';
+
+import styles from './NavigationBar.module.scss';
+import logoIcon from '../../../public/icons/logo.svg';
+import menuIcon from '../../../public/icons/menuIcon.svg';
+import closeIcon from '../../../public/icons/closeIcon.svg';
 
 export default function NavigationBar() {
     const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
@@ -20,11 +23,13 @@ export default function NavigationBar() {
                 </div>
             </div>
             <div className={styles.navigationHamburger} onClick={handleSidebarToggle}>
-                =
+                <Image src={menuIcon} alt='menu' />
             </div>
             <nav className={sidebarIsOpen ? styles.navigationOpen : styles.navigationHidden}>
                 <ul>
-                    <div className={styles.navigationClose} onClick={handleSidebarToggle}>x</div>
+                    <div className={styles.navigationClose} onClick={handleSidebarToggle}>
+                        <Image src={closeIcon} alt='close' />
+                    </div>
                     <li>
                         <a href="">WORK</a>
                     </li>

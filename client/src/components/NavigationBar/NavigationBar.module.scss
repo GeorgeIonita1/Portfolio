@@ -46,6 +46,9 @@
             transition: all 0.3s;
             background-color: var(--navigation-background);
         }
+        @media (max-width: $media-breakpoint-phone) {
+            width: 100%;
+        }
     }
     
     &Open {

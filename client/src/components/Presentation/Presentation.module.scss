@@ -19,6 +19,7 @@
 
     &Links {
         @include position(absolute, $bottom: 1rem, $left: 0);
+        display: none;
         margin-left: 1rem;
         display: flex;
         flex-direction: column;
@@ -42,6 +43,7 @@
     
     &Scroll {
         @include position(absolute, $bottom: 1rem, $right: 0);
+        display: none;
 
         small {
             transform: rotate(90deg) translateX(-50%);

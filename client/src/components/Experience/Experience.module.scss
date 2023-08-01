@@ -2,7 +2,7 @@
 
 .experience > div  {
     // card
-    @media (min-width: $media-breakpoint-L) {
+    @media (min-width: $media-breakpoint-tablet) {
         max-width: 40%;
         left: 50%;
     }
@@ -13,7 +13,7 @@
     
     > div {
         // skeleton
-        @media (max-width: $media-breakpoint-L) {
+        @media (max-width: $media-breakpoint-tablet) {
             left: -3rem;
         }
         @include position(absolute, $top: 0);
@@ -23,26 +23,26 @@
     }
     
     &:nth-child(odd) {
-        @media (min-width: $media-breakpoint-L) {
+        @media (min-width: $media-breakpoint-tablet) {
             transform: translateX(calc(-100% - 3rem + 5px));
         }
 
 
         > div {
-            @media (min-width: $media-breakpoint-L) {
+            @media (min-width: $media-breakpoint-tablet) {
                 right: -3rem;
             }
         }
     }
     
     &:nth-child(even) {
-        @media (min-width: $media-breakpoint-L) {
+        @media (min-width: $media-breakpoint-tablet) {
             left: calc(50% + 3rem);
         }
         
         
         > div {
-            @media (min-width: $media-breakpoint-L) {
+            @media (min-width: $media-breakpoint-tablet) {
                 left: -3rem;
             }
         }

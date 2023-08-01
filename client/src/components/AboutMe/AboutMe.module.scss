@@ -17,7 +17,13 @@
     
     &Poster {
         @media (max-width: $media-breakpoint-XL) {
-            align-self: center;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 33%;
+        }
+        @media (max-width: $media-breakpoint-XL) {
+            width: 100%;
+            max-width: rem(400);
         }
         position: relative;
         flex-basis: 35%;
@@ -56,7 +62,7 @@
     &Cards {
         @media (max-width: $media-breakpoint-L) {
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 2rem 1rem;
             justify-content: center;
         }
         display: flex;

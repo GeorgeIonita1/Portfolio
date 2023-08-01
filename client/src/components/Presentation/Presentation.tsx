@@ -10,15 +10,19 @@ import { useEffect, useRef } from 'react';
 
 export default function Presentation() {
     const contactButtonRef = useRef<HTMLButtonElement>(null);
+    const linksRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         setTimeout(() => {
-            console.log(contactButtonRef)
             if (contactButtonRef.current) {
                 contactButtonRef.current.style.display = 'block';
-
             }
         }, 7000)
+        setTimeout(() => {
+            if (linksRef.current) {
+                linksRef.current.style.display = 'block';
+            }
+        }, 7500);
     }, [])
 
     return (
@@ -26,7 +30,7 @@ export default function Presentation() {
             <div className={styles.presentationTitle}>
                 <TypeAnimation
                     sequence={[
-                        100,
+                        600,
                         'Hello, I am George'
                     ]}
                     wrapper="h1"
@@ -55,11 +59,11 @@ export default function Presentation() {
                     <a href="#contact">Contact</a>
                 </button>
             </div>
-            <div className={styles.presentationLinks}>
+            <div className={styles.presentationLinks} ref={linksRef}>
                 <div className='svg-container'><Image src={linkedinIcon} alt='LinkedIn' /></div>
                 <div className='svg-container'><Image src={githubIcon} alt='Github' /></div>
             </div>
-            <div className={styles.presentationScroll}>
+            <div className={styles.presentationScroll} ref={linksRef}>
                 <small>Scroll Down</small>
             </div>
         </section>

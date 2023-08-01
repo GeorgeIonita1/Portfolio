@@ -13,7 +13,7 @@ export default function ExperienceCard() {
                 <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti nemo excepturi cumque.</li>
             </ul>
             <div className={styles.experienceCardSkeleton}>
-                <div className={styles.experienceCardImage}>
+                <div className={`${styles.experienceCardImage} svg-container`}>
                     <Image src={githubIcon} alt='Github logo' />
                 </div>
             </div>

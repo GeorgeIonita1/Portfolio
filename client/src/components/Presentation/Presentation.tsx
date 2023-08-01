@@ -18,7 +18,7 @@ export default function Presentation() {
                 contactButtonRef.current.style.display = 'block';
 
             }
-        }, 3000)
+        }, 7000)
     }, [])
 
     return (
@@ -26,12 +26,12 @@ export default function Presentation() {
             <div className={styles.presentationTitle}>
                 <TypeAnimation
                     sequence={[
+                        100,
                         'Hello, I am George'
                     ]}
                     wrapper="h1"
                     speed={30}
                     cursor={false}
-                    style={{ display: 'block' }}
                 />
                 <TypeAnimation
                     sequence={[
@@ -56,8 +56,8 @@ export default function Presentation() {
                 </button>
             </div>
             <div className={styles.presentationLinks}>
-                <div><Image src={linkedinIcon} alt='LinkedIn' /></div>
-                <div><Image src={githubIcon} alt='Github' /></div>
+                <div className='svg-container'><Image src={linkedinIcon} alt='LinkedIn' /></div>
+                <div className='svg-container'><Image src={githubIcon} alt='Github' /></div>
             </div>
             <div className={styles.presentationScroll}>
                 <small>Scroll Down</small>

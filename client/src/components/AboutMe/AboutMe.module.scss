@@ -19,8 +19,25 @@
         @media (max-width: $media-breakpoint-XL) {
             align-self: center;
         }
+        position: relative;
         flex-basis: 35%;
         aspect-ratio: 1;
+        border-radius: var(--border-radius-card);
+        transform: rotate(-1deg);
+        transition: all 0.3s;
+
+        &:hover {
+            transform: rotate(0);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(to bottom, var(--progress-background-accent), var(--card-border-end));
+            z-index: -1;
+            border-radius: inherit;
+        }
 
         img {
             border-radius: var(--border-radius-card);

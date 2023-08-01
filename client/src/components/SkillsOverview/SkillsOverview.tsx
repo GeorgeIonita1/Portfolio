@@ -21,49 +21,49 @@ export default function SkillsOverview() {
                     <h3>Technical Skills</h3>
                     <div>
                         <div>
-                            <div className={styles.skillsTechnicalIcon}><Image src={htmlIcon} alt='Html icon' /></div>
+                            <div className={`${styles.skillsTechnicalIcon} svg-container`}><Image src={htmlIcon} alt='Html icon' /></div>
                             <small>HTML</small>
                             <div className={styles.skillsTechnicalProgress}>
                                 <div><div className={styles.skillsTechnicalPercentage}>50%</div></div>
                             </div>
                         </div>
                         <div>
-                            <div className={styles.skillsTechnicalIcon}><Image src={sassIcon} alt='sass Icon' /></div>
+                            <div className={`${styles.skillsTechnicalIcon} svg-container`}><Image src={sassIcon} alt='sass Icon' /></div>
                             <small>Sass</small>
                             <div className={styles.skillsTechnicalProgress}>
                                 <div><div className={styles.skillsTechnicalPercentage}>50%</div></div>
                             </div>
                         </div>
                         <div>
-                            <div className={styles.skillsTechnicalIcon}><Image src={javascriptIcon} alt='javascript Icon' /></div>
+                            <div className={`${styles.skillsTechnicalIcon} svg-container`}><Image src={javascriptIcon} alt='javascript Icon' /></div>
                             <small>JavaScript</small>
                             <div className={styles.skillsTechnicalProgress}>
                                 <div><div className={styles.skillsTechnicalPercentage}>50%</div></div>
                             </div>
                         </div>
                         <div>
-                            <div className={styles.skillsTechnicalIcon}><Image src={reactIcon} alt='react Icon' /></div>
+                            <div className={`${styles.skillsTechnicalIcon} svg-container`}><Image src={reactIcon} alt='react Icon' /></div>
                             <small>React</small>
                             <div className={styles.skillsTechnicalProgress}>
                                 <div><div className={styles.skillsTechnicalPercentage}>50%</div></div>
                             </div>
                         </div>
                         <div>
-                            <div className={styles.skillsTechnicalIcon}><Image src={nodeIcon} alt='node Icon' /></div>
+                            <div className={`${styles.skillsTechnicalIcon} svg-container`}><Image src={nodeIcon} alt='node Icon' /></div>
                             <small>Node</small>
                             <div className={styles.skillsTechnicalProgress}>
                                 <div><div className={styles.skillsTechnicalPercentage}>50%</div></div>
                             </div>
                         </div>
                         <div>
-                            <div className={styles.skillsTechnicalIcon}><Image src={nestIcon} alt='nest Icon' /></div>
+                            <div className={`${styles.skillsTechnicalIcon} svg-container`}><Image src={nestIcon} alt='nest Icon' /></div>
                             <small>Nest</small>
                             <div className={styles.skillsTechnicalProgress}>
                                 <div><div className={styles.skillsTechnicalPercentage}>50%</div></div>
                             </div>
                         </div>
                         <div>
-                            <div className={styles.skillsTechnicalIcon}><Image src={gitIcon} alt='git Icon' /></div>
+                            <div className={`${styles.skillsTechnicalIcon} svg-container`}><Image src={gitIcon} alt='git Icon' /></div>
                             <small>Git</small>
                             <div className={styles.skillsTechnicalProgress}>
                                 <div><div className={styles.skillsTechnicalPercentage}>50%</div></div>

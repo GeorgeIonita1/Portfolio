@@ -39,15 +39,15 @@ export default function Contact() {
                 <form ref={formRef} onSubmit={sendEmail}>
                     <label>
                         Your Name
-                        <input name='name' type="text" />
+                        <input required name='name' type="text" />
                     </label>
                     <label>
                         Your emai
-                        <input name='email' type="email" />
+                        <input required name='email' type="email" />
                     </label>
                     <label>
                         Your message
-                        <textarea name='message' rows={10} />
+                        <textarea required name='message' rows={10} />
                     </label>
                     <button>Send</button>
                 </form>

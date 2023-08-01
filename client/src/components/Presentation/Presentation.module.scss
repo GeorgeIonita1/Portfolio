@@ -1,22 +1,19 @@
 @import '../../styles/mixins.scss';
 
 .presentation {
-    h1 {
+    &Title {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        gap: 1rem;
-    }
+        gap: 2rem;
 
-    &Image {
-        @include position(absolute, $bottom: 0, $left: 50%);
-        transform: translateX(-50%);
-        width: rem(300);
-        height: 60vh;
-        max-height: 25rem;
+        button {
+            display: none;
+        }
 
-        img {
-            border-radius: rem(200) rem(200) 0 0;
+        > * {
+            text-align: center;
         }
     }
 
@@ -32,7 +29,7 @@
             content: '';
             width: 1px;
             height: rem(30);
-            background-color: black;
+            background-color: white;
             margin-top: rem(10);
         }
 
@@ -55,7 +52,7 @@
                 content: '';
                 width: rem(30);
                 height: 1px;
-                background-color: black;
+                background-color: white;
                 margin-left: rem(15);
             }
         }

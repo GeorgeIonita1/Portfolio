@@ -42,12 +42,14 @@ button {
 // layout
 section {
     @media (min-width: $media-breakpoint-phone) {
-        padding: 15rem 4rem 3rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
     }
     @media (min-width: $media-breakpoint-tablet) {
-        padding: 15rem 8rem 3rem;
+        padding-left: 8rem;
+        padding-right: 8rem;
     }
-    padding: 15rem 2rem 3rem;
+    padding: 14rem 2rem 3rem;
     position: relative;
     max-width: var(--body-max-width);
     min-height: 100vh;

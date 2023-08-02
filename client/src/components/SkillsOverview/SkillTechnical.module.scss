@@ -1,0 +1,44 @@
+@import '../../styles/mixins.scss';
+
+.skill {
+    margin-bottom: 5rem;
+
+    &Icon {
+        width: rem(20);
+        height: rem(20);
+    }
+
+    &Progress {
+        height: rem(7);
+        width: 100%;
+        background-color: var(--progress-background);
+        border-radius: 50px;
+        
+        > div {
+            position: relative;
+            background-color: var(--progress-background-accent);
+            height: 100%;
+            border-radius: inherit;
+        }
+    }
+
+    &Percentage {
+        @include position(absolute, $right: 0, $bottom: 0.7rem);
+        font-size: 12px;
+        background-color: black;
+        color: white;
+        transform: translateX(50%);
+
+        &::after {
+            @include position(absolute, $left: 50%);
+            transform: translateX(-50%);
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 7px solid black;
+            display: block;
+        }
+    }
+}

@@ -6,7 +6,7 @@
     justify-content: center;
 
     &MainContent {
-        @media (max-width: $media-breakpoint-XL) {
+        @media (max-width: $media-breakpoint-XXL) {
             flex-direction: column;
             gap: 3rem;
         }
@@ -16,14 +16,11 @@
     }
     
     &Poster {
-        @media (max-width: $media-breakpoint-XL) {
+        @media (max-width: $media-breakpoint-XXL) {
             left: 50%;
             transform: translateX(-50%);
-            width: 33%;
-        }
-        @media (max-width: $media-breakpoint-XL) {
-            width: 100%;
             max-width: rem(400);
+            width: 100%;
         }
         position: relative;
         flex-basis: 35%;

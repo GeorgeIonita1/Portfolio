@@ -46,23 +46,51 @@ export const skillsTechnical = [
 
 export const skillsProfessional = [
     {
-        name: 'Pizza',
-        progress: 70
-    },
-    {
-        name: 'Pizza',
-        progress: 80
-    },
-    {
-        name: 'Pizza',
+        name: 'Code Quality',
         progress: 90
     },
     {
-        name: 'Pizza',
-        progress:84
+        name: 'Creativity',
+        progress: 80
     },
     {
-        name: 'Pizza',
-        progress: 77
+        name: 'Adaptability',
+        progress: 85
     },
+    {
+        name: 'Communication',
+        progress:90
+    },
+    {
+        name: 'Satisfaction',
+        progress: 100
+    },
+];
+
+export const experiences = [
+    {
+        title: 'Drupal Web Developer',
+        company: 'Tremend',
+        description: [
+            'Worked with a team to develop a european union platform',
+            'Technologies HTML, SCSS, JavaScript, Drupal CMS',
+            'Skills communication, teamwork, etc'
+        ]
+    },
+    {
+        title: 'Magento Web Developer',
+        company: 'Tremend',
+        description: [
+            'Magento e-commerce app for one of the biggest retailers in Romania',
+            'Dailyes, client meetings, plannings, code review, domumentation, development'
+        ]
+    },
+    {
+        title: 'React.Js Web Developer',
+        company: 'Tremend',
+        description: [
+            'Create functional reusable components following best practices',
+            'Have great passionate sex with the project manager Luiza <3'
+        ]
+    }
 ];

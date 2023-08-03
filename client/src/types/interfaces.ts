@@ -16,3 +16,13 @@ interface SkillTechnicalProps {
 interface SkillsProfessionalProps {
     data: SkillsProfessional;
 }
+
+interface Experiences {
+    title: string;
+    company: string;
+    description: Array<string>;
+}
+
+interface ExperiencesProps {
+    data: Experiences;
+}

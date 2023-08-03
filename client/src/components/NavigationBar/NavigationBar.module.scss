@@ -46,7 +46,7 @@
             transition: all 0.3s;
             background-color: var(--navigation-background);
         }
-        @media (max-width: $media-breakpoint-phone) {
+        @media (max-width: $media-breakpoint-L) {
             width: 100%;
         }
     }

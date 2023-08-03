@@ -63,12 +63,15 @@ section {
 }
 
 header {
-    @media (min-width: $media-breakpoint-phone) {
-        padding: 0 4rem;
+    @media (max-width: $media-breakpoint-tablet) {
+        padding: 0 var(--section-padding-tablet);
+    }
+    @media (max-width: $media-breakpoint-phone) {
+        padding: 0 var(--section-padding-phone);
     }
     max-width: var(--body-max-width);
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--section-padding-phone);
     z-index: 10;
 }
 

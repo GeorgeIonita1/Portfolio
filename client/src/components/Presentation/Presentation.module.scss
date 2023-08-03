@@ -18,7 +18,10 @@
     }
 
     &Links {
-        @include position(absolute, $bottom: 1rem, $left: 0);
+        @media (max-width: $media-breakpoint-tablet) {
+            left: 2rem;
+        }
+        @include position(absolute, $bottom: 1rem, $left: var(--presentation-links-offset));
         display: none;
         margin-left: 1rem;
         display: flex;
@@ -35,6 +38,10 @@
         }
 
         > div {
+            @media (max-width: $media-breakpoint-tablet) {
+                width: 3rem;
+                height: 3rem;
+            }
             width: rem(20);
             height: rem(20);
         }
@@ -42,7 +49,10 @@
     }
     
     &Scroll {
-        @include position(absolute, $bottom: 1rem, $right: 0);
+        @media (max-width: $media-breakpoint-tablet) {
+            right: 2rem;
+        }
+        @include position(absolute, $bottom: 1rem, $right: var(--presentation-scroll-offset));
         display: none;
 
         small {

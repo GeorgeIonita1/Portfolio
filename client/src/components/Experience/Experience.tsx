@@ -1,5 +1,6 @@
 import styles from './Experience.module.scss';
 import ExperienceCard from './ExperienceCard';
+import { experiences } from '@/services/helpers';
 
 export default function Experience() {
     return (
@@ -9,10 +10,7 @@ export default function Experience() {
                 <h2>Work Experience</h2>
             </div>
             <div className={styles.experience}>
-                <ExperienceCard />
-                <ExperienceCard />
-                <ExperienceCard />
-                <ExperienceCard />
+                {experiences.map(experience => <ExperienceCard key={experience.title} data={experience} />)}
             </div>
         </section>
     )

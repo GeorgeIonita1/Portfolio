@@ -11,6 +11,10 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--body-background);
     color: white;
@@ -43,6 +47,7 @@ button {
     color: black;
     border-radius: 8px;
     padding: rem(15) rem(30);
+    cursor: pointer;
 }
 
 // layout

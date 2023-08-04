@@ -6,6 +6,11 @@ import nodeIcon from '../../public/icons/node.svg';
 import nestIcon from '../../public/icons/nest.png';
 import gitIcon from '../../public/icons/git.svg';
 
+// links
+export const LinkedInLink = 'https://www.linkedin.com/in/george-ionita-850b46153/';
+export const GithubLink = 'https://github.com/GeorgeIonita1';
+
+// Profile skills and experiences
 export const skillsTechnical = [
     {
         name: 'HTML',
@@ -69,28 +74,44 @@ export const skillsProfessional = [
 
 export const experiences = [
     {
+        title: 'React.Js Web Developer',
+        company: 'Tremend',
+        description: [
+            'Create functional reusable components following best practices',
+            'Align with QA and backend team to implement efficient and scalable code',
+            'Write and maintain documentation for new features and releases',
+            'Debugging with DevTools and VSCode',
+            'Plan and showcase new features demo to the client'
+        ]
+    },
+    {
         title: 'Drupal Web Developer',
         company: 'Tremend',
         description: [
-            'Worked with a team to develop a european union platform',
-            'Technologies HTML, SCSS, JavaScript, Drupal CMS',
-            'Skills communication, teamwork, etc'
+            'Write w3 compliant code to meet high European standards',
+            'Join a multicultural team to develop great communication and adaptability skills',
+            'Hands-on experience with the Drupal CMS',
+            'Help connect development professionals around the world so they can collaborate and share knowledge'
         ]
     },
     {
         title: 'Magento Web Developer',
         company: 'Tremend',
         description: [
-            'Magento e-commerce app for one of the biggest retailers in Romania',
-            'Dailyes, client meetings, plannings, code review, domumentation, development'
+            'Participate in updating the website of one of the largest e-commerce shops in Romania',
+            'Join a fast-paced environment and make sure releases are delivered on-time',
+            'Hands-on experience with the Magento CMS',
+            'Pass Salesforce Commerce Cloud Developer Certification',
+            'Learn working in an agile environment',
         ]
     },
     {
-        title: 'React.Js Web Developer',
-        company: 'Tremend',
+        title: 'Email Marketing Specialist',
+        company: 'EvoWise',
         description: [
-            'Create functional reusable components following best practices',
-            'Have great passionate sex with the project manager Luiza <3'
+            'Ensure on-time delivery of multiple Campaigns',
+            'Create email templates and manage users database',
+            'Provide customer support'
         ]
     }
 ];

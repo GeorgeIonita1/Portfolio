@@ -37,11 +37,12 @@
             margin-top: rem(10);
         }
 
-        > div {
+        > a {
             @media (max-width: $media-breakpoint-tablet) {
                 width: 3rem;
                 height: 3rem;
             }
+            display: block;
             width: rem(20);
             height: rem(20);
         }

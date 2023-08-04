@@ -30,14 +30,14 @@ export default function NavigationBar() {
                     <div className={styles.navigationClose} onClick={handleSidebarToggle}>
                         <Image src={closeIcon} alt='close' />
                     </div>
-                    <li>
-                        <a href="">WORK</a>
+                    <li onClick={handleSidebarToggle}>
+                        <a href="#about-me">ABOUT</a>
                     </li>
-                    <li>
-                        <a href="">ABOUT</a>
+                    <li onClick={handleSidebarToggle}>
+                        <a href="#recent-work">WORK</a>
                     </li>
-                    <li>
-                        <a href="">RESUME</a>
+                    <li onClick={handleSidebarToggle}>
+                        <a href='/documents/GeorgeIonita.pdf' target='_blank'>RESUME</a>
                     </li>
                 </ul>
             </nav>

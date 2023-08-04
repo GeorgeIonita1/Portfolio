@@ -9,10 +9,11 @@
     
     a {
         @media (max-width: $media-breakpoint-tablet) {
-            color: black;
+            color: var(--body-background);
         }
         position: relative;
         color: var(--light-green);
+        font-size: 1rem;
     }
     
     ul {

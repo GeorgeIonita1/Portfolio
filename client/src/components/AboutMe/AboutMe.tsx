@@ -11,7 +11,7 @@ import awardIcon from '../../../public/icons/award.svg';
 
 export default function AboutMe() {
     return (
-        <section className={styles.aboutMe}>
+        <section id='about-me' className={styles.aboutMe}>
             <div className='title-container'>
                 <h5>Get to know</h5>
                 <h2>About me</h2>
@@ -25,24 +25,28 @@ export default function AboutMe() {
                         <div className={styles.aboutMeCard}>
                             <div className={`${styles.aboutMeCardImage} svg-container`}><Image src={awardIcon} alt='Award icon' /></div>
                             <h3>Experience</h3>
-                            <h4>3+ years working</h4>
+                            <h4>2+ years working</h4>
                         </div>
                         <div className={styles.aboutMeCard}>
                             <div className={`${styles.aboutMeCardImage} svg-container`}><Image src={webIcon} alt='Web icon' /></div>
                             <h3>Web development</h3>
-                            <h4>3+ years working</h4>
+                            <h4>3 years</h4>
                         </div>
                         <div className={styles.aboutMeCard}>
                             <div className={`${styles.aboutMeCardImage} svg-container`}><Image src={backendIcon} alt='Backend icon' /></div>
                             <h3>Backend development</h3>
-                            <h4>3+ years working</h4>
+                            <h4>1+ years</h4>
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Perspiciatis, consectetur delectus. Quae optio, ad neque illo 
-                        quia dolores culpa earum.
+                    <p>
+                        I like designing and developing full-stack web applications where I can
+                        experiment with the latest technologies.
+                        I am very patient and resilient in my work, an analytical person with a keen
+                        eye for details.
                     </p>
-                    <button>Lets talk</button>
+                    <a href="#contact">
+                        <button>Lets talk</button>
+                    </a>
                 </div>
             </div>
         </section>

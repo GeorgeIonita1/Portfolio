@@ -7,6 +7,7 @@ import styles from './Presentation.module.scss';
 import linkedinIcon from '../../../public/icons/linkedin.svg';
 import githubIcon from '../../../public/icons/github.svg';
 import { useEffect, useRef } from 'react';
+import { GithubLink, LinkedInLink } from '@/services/helpers';
 
 export default function Presentation() {
     const contactButtonRef = useRef<HTMLButtonElement>(null);
@@ -55,13 +56,17 @@ export default function Presentation() {
                     speed={30}
                     cursor={false}
                 />
-                <button ref={contactButtonRef}>
-                    <a href="#contact">Contact</a>
-                </button>
+                <a href="#contact">
+                    <button ref={contactButtonRef}>Contact</button>
+                </a>
             </div>
             <div className={styles.presentationLinks} ref={linksRef}>
-                <div className='svg-container'><Image src={linkedinIcon} alt='LinkedIn' /></div>
-                <div className='svg-container'><Image src={githubIcon} alt='Github' /></div>
+                <a href={LinkedInLink} target='_blank'>
+                    <div className='svg-container'><Image src={linkedinIcon} alt='LinkedIn' /></div>
+                </a>
+                <a href={GithubLink} target='_blank'>
+                    <div className='svg-container'><Image src={githubIcon} alt='Github' /></div>
+                </a>
             </div>
             <div className={styles.presentationScroll} ref={linksRef}>
                 <small>Scroll Down</small>

@@ -1,3 +1,4 @@
+import { SkillsProfessionalProps } from '@/types/interfaces';
 import styles from './SkillProfessional.module.scss';
 
 export default function SkillsProfessional({ data }: SkillsProfessionalProps) {

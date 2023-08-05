@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import styles from './SkillTechnical.module.scss';
+import { SkillTechnicalProps } from '@/types/interfaces';
 
 
 export default function SkillTechnical({ data }: SkillTechnicalProps) {

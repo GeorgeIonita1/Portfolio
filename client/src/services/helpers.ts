@@ -5,6 +5,7 @@ import reactIcon from '../../public/icons/react.svg';
 import nodeIcon from '../../public/icons/node.svg';
 import nestIcon from '../../public/icons/nest.png';
 import gitIcon from '../../public/icons/git.svg';
+import projectShowcase from '../../public/pictures/ProjectShowcase.png';
 
 // links
 export const LinkedInLink = 'https://www.linkedin.com/in/george-ionita-850b46153/';
@@ -114,4 +115,14 @@ export const experiences = [
             'Provide customer support'
         ]
     }
+];
+
+// Recent work
+export const recentWorks = [
+    {
+        name: 'Project Showcase',
+        thumbnail: projectShowcase,
+        redirrect: 'https://personal-website-cd86a.web.app/',
+        githubRedirrect: 'https://github.com/GeorgeIonita1/ProjectShowcase_client'
+    },
 ];

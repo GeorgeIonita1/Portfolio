@@ -1,6 +1,8 @@
+import Image from 'next/image';
+
 import styles from './ExperienceCard.module.scss';
 import githubIcon from '../../../public/icons/github.svg';
-import Image from 'next/image';
+import { ExperiencesProps } from '@/types/interfaces';
 
 export default function ExperienceCard({ data }: ExperiencesProps) {
     return (

@@ -1,4 +1,14 @@
+@import '../../styles/mixins.scss';
+
 .recentWorkCard {
+    position: relative;
+    
+    &:hover {
+        .recentWorkCardOverlay {
+            height: 100%;
+        }
+    }
+
     &Image {
         aspect-ratio: 3/2;
 
@@ -6,4 +16,54 @@
             border-radius: var(--border-radius-tree);
         }
     }
+
+    &Overlay {
+        @media (min-width: $media-breakpoint-tablet) {
+            @include position(absolute, $right: 0, $bottom: 0, $left: 0);
+            height: 0;
+            background: linear-gradient(transparent, var(--navigation-background));
+            transition: all 0.2s;
+            overflow: hidden;
+        }
+    }
+    
+    &Links {
+        @media (min-width: $media-breakpoint-tablet) {
+            @include position(absolute, $right: 1rem, $bottom: 1rem, $left: 1rem);
+            justify-content: center;
+            align-items: center;
+        }
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        > a {
+            @media (max-width: $media-breakpoint-tablet) {
+                flex-basis: 100%;
+                background-color: var(--navigation-background);
+                display: flex;
+                justify-content: center;
+                padding: 0.2rem 0;
+                border-radius: 4px;
+            }
+        }
+        
+    }
+    
+    &Button {
+        height: rem(50);
+        width: rem(50);
+        display: block;
+        background-color: var(--body-background);
+        border-radius: 50%;
+        padding: rem(13);
+    
+        &:hover {
+            img {
+                filter: invert(78%) sepia(28%) saturate(1847%) hue-rotate(170deg) brightness(103%) contrast(102%);
+            }
+        }
+    }
+
 }

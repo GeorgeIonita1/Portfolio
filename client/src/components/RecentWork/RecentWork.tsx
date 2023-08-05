@@ -1,5 +1,6 @@
+import { recentWorks } from '@/services/helpers';
 import styles from './RecentWork.module.scss';
-// import RecentWorkCard from './RecentWorkCard';
+import RecentWorkCard from './RecentWorkCard';
 
 export default function RecentWork() {
     return (
@@ -9,8 +10,7 @@ export default function RecentWork() {
                 <h2>Portfolio</h2>
             </div>
             <div className={styles.recentworkContainer}>
-                {/* <RecentWorkCard /> */}
-                <h1>Soon to come</h1>
+                {recentWorks.map(work => <RecentWorkCard key={work.name} data={work} />)}
             </div>
         </section>
     )

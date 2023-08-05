@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 interface SkillTechnical {
     name: string;
     progress: number;
@@ -9,11 +11,11 @@ interface SkillsProfessional {
     progress: number;
 }
 
-interface SkillTechnicalProps {
+export interface SkillTechnicalProps {
     data: SkillTechnical;
 }
 
-interface SkillsProfessionalProps {
+export interface SkillsProfessionalProps {
     data: SkillsProfessional;
 }
 
@@ -23,6 +25,17 @@ interface Experiences {
     description: Array<string>;
 }
 
-interface ExperiencesProps {
+export interface ExperiencesProps {
     data: Experiences;
+}
+
+interface RecentWorks {
+    name: string;
+    thumbnail: StaticImageData;
+    redirrect: string;
+    githubRedirrect: string;
+}
+
+export interface RecentWorksProps {
+    data: RecentWorks;
 }

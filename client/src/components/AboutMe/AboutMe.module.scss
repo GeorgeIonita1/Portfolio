@@ -93,20 +93,22 @@
         padding: 1rem;
         border-radius: var(--border-radius-card);
         max-width: rem(260);
+        z-index: 3;
+        border: 1px solid var(--card-border-end);
+        transition: all 1s;
 
-        &::after {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            background: linear-gradient(to bottom, var(--progress-background-accent), var(--card-border-end));
-            z-index: -1;
-            border-radius: inherit;
+        &:nth-child(2) {
+            transition-delay: 200ms;
         }
-
+        
+        &:nth-child(3) {
+            transition-delay: 400ms;
+        }
+        
         h3 {
             text-align: center;
         }
-
+        
         &Image {
             width: rem(20);
             height: rem(20);

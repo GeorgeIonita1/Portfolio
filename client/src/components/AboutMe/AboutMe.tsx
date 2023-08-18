@@ -1,6 +1,8 @@
 'use client'
 // todo: create components for cards;
 // change icons with 3d models
+// unobserve the Intersection Observer
+// create a hook for the IntersectionObserver
 
 import Image from 'next/image';
 
@@ -9,9 +11,11 @@ import codingBrackets from '../../../public/pictures/codingBrackets.png';
 import backendIcon from '../../../public/icons/backend.svg';
 import webIcon from '../../../public/icons/web.svg';
 import awardIcon from '../../../public/icons/award.svg';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function AboutMe() {
+    const aboutMeRef = useRef<HTMLDivElement | null>(null);
+
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -24,8 +28,9 @@ export default function AboutMe() {
         { root: null, threshold: 0.25 }
         );
 
-        const hiddenElements = document.querySelectorAll('.hidden');
-        hiddenElements.forEach(el => observer.observe(el));
+        if (aboutMeRef.current) {
+            Array.from(aboutMeRef.current.children).forEach(el => observer.observe(el));
+        }
     }, [])
 
     return (
@@ -39,7 +44,7 @@ export default function AboutMe() {
                     <Image src={codingBrackets} alt='Coding picture' />
                 </div>
                 <div className={styles.aboutMeDetails}>
-                    <div className={styles.aboutMeCards}>
+                    <div ref={aboutMeRef} className={styles.aboutMeCards}>
                         <div className={`${styles.aboutMeCard} hidden`}>
                             <div className={`${styles.aboutMeCardImage} svg-container`}><Image src={awardIcon} alt='Award icon' /></div>
                             <h3>Experience</h3>

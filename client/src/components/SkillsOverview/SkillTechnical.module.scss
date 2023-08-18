@@ -10,15 +10,20 @@
 
     &Progress {
         height: rem(7);
-        width: 100%;
+        width: 0;
         background-color: var(--progress-background);
         border-radius: 50px;
+        transition: all 1s;
+        transition-delay: 0.3s;
         
         > div {
             position: relative;
             background-color: var(--progress-background-accent);
             height: 100%;
             border-radius: inherit;
+            width: 0;
+            transition: all 1s;
+            transition-delay: 0.3s;
         }
     }
 

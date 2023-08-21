@@ -1,49 +1,21 @@
 @import '../../styles/mixins.scss';
 
-.experience > div  {
-    // card
-    @media (min-width: $media-breakpoint-tablet) {
-        max-width: 40%;
-        left: 50%;
-    }
-    position: relative;
-    left: 4rem;
-    max-width: calc(100% - 4rem);
-    background-color: var(--card-background);
-    
+.experience {
+    display: flex;
+    flex-direction: column;
+
     > div {
-        // skeleton
-        @media (max-width: $media-breakpoint-tablet) {
-            left: -3rem;
-        }
-        @include position(absolute, $top: 0);
-        width: rem(5);
-        height: 100%;
-        background-color: var(--light-green);
-    }
-    
-    &:nth-child(odd) {
-        @media (min-width: $media-breakpoint-tablet) {
-            transform: translateX(calc(-100% - 3rem + 5px));
-        }
+        &:nth-child(even) {
+            align-self: flex-end;
 
-
-        > div {
-            @media (min-width: $media-breakpoint-tablet) {
-                right: -3rem;
+            > div:nth-child(2) {
+                left: -53px;
             }
         }
-    }
-    
-    &:nth-child(even) {
-        @media (min-width: $media-breakpoint-tablet) {
-            left: calc(50% + 3rem);
-        }
-        
-        
-        > div {
-            @media (min-width: $media-breakpoint-tablet) {
-                left: -3rem;
+
+        &:nth-child(odd) {
+            > div:nth-child(2) {
+                right: -53px;
             }
         }
     }

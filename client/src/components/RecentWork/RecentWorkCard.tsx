@@ -13,7 +13,7 @@ export default function RecentWorkCard({ data }: RecentWorksProps) {
             </div>
             <div className={styles.recentWorkCardOverlay}>
                 <div className={styles.recentWorkCardLinks}>
-                    <a href={data.redirrect} target='_blank'>
+                    <a href={data.githubRedirrect} target='_blank'>
                         <div className={`svg-container ${styles.recentWorkCardButton}`}>
                             <Image src={githubIcon} alt='udmmy' />
                         </div>

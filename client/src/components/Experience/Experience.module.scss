@@ -5,17 +5,19 @@
     flex-direction: column;
 
     > div {
-        &:nth-child(even) {
-            align-self: flex-end;
-
-            > div:nth-child(2) {
-                left: -53px;
+        @media (min-width: $media-breakpoint-custom-900) {
+            &:nth-child(even) {
+                align-self: flex-end;
+    
+                > div:nth-child(2) {
+                    left: -53px;
+                }
             }
-        }
-
-        &:nth-child(odd) {
-            > div:nth-child(2) {
-                right: -53px;
+    
+            &:nth-child(odd) {
+                > div:nth-child(2) {
+                    right: -53px;
+                }
             }
         }
     }

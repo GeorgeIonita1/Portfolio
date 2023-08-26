@@ -17,19 +17,23 @@ export default function AboutMe() {
     const aboutMeRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.remove('hidden');
-                    entry.target.classList.add('show');
-                }
-            })
-        },
-        { root: null, threshold: 0.25 }
-        );
+        const test = (element: HTMLElement) => {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        (entry.target as HTMLElement).dataset.hidden = 'false';
+                        observer.disconnect();
+                    }
+                })
+            },
+            { root: null, threshold: 0.25 }
+            );
+
+            observer.observe(element);
+        };
 
         if (aboutMeRef.current) {
-            Array.from(aboutMeRef.current.children).forEach(el => observer.observe(el));
+            Array.from(aboutMeRef.current.children).forEach(el => test(el as HTMLElement));
         }
     }, [])
 
@@ -45,17 +49,17 @@ export default function AboutMe() {
                 </div>
                 <div className={styles.aboutMeDetails}>
                     <div ref={aboutMeRef} className={styles.aboutMeCards}>
-                        <div className={`${styles.aboutMeCard} hidden`}>
+                        <div className={styles.aboutMeCard} data-hidden={'true'}>
                             <div className={`${styles.aboutMeCardImage} svg-container`}><Image src={awardIcon} alt='Award icon' /></div>
                             <h3>Experience</h3>
                             <h4>2+ years working</h4>
                         </div>
-                        <div className={`${styles.aboutMeCard} hidden`}>
+                        <div className={styles.aboutMeCard} data-hidden={'true'}>
                             <div className={`${styles.aboutMeCardImage} svg-container`}><Image src={webIcon} alt='Web icon' /></div>
                             <h3>Web development</h3>
                             <h4>3 years</h4>
                         </div>
-                        <div className={`${styles.aboutMeCard} hidden`}>
+                        <div className={styles.aboutMeCard} data-hidden={'true'}>
                             <div className={`${styles.aboutMeCardImage} svg-container`}><Image src={backendIcon} alt='Backend icon' /></div>
                             <h3>Backend development</h3>
                             <h4>1+ years</h4>

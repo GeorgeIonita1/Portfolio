@@ -95,7 +95,9 @@
         max-width: rem(260);
         z-index: 3;
         border: 1px solid var(--card-border-end);
-        transition: all 1s;
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 1s, transform 1s;
 
         &:nth-child(2) {
             transition-delay: 200ms;
@@ -112,6 +114,12 @@
         &Image {
             width: rem(20);
             height: rem(20);
+        }
+
+        &[data-hidden="true"] {
+            opacity: 0;
+            transform: translateX(-100%);
+            // filter: blur(5px);
         }
     }
 }
